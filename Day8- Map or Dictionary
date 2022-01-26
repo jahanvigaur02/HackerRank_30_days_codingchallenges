@@ -1,0 +1,13 @@
+#Enter your code here. Read input from STDIN. Print output to STDOUT
+n=int(input())
+D=dict(input().split()for i in range(n))
+#print(D)
+try:
+    for i in range(0,n):
+        name=input().lower()
+        if name in D:
+            print(name,"=",D.get(name),sep="")
+        else:
+            print("Not found")
+except(EOFError):
+    pass
